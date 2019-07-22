@@ -1,5 +1,6 @@
 package com.monitoring.data_manipulation.controller;
 
+import com.alibaba.fastjson.JSONObject;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,7 +23,7 @@ public class WebSocketController {
      */
     @MessageMapping("/promPushData")
     @SendTo("/monitoring/getCurrentData")
-    public void receive(){
+    public void receive(JSONObject param){
         //TODO disposal data and send data to browser
     }
 

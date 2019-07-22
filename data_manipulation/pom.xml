@@ -20,6 +20,13 @@
     </properties>
 
     <dependencies>
+        <!-- JSON 工具 -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.58</version>
+        </dependency>
+
         <!-- 发送 Rest 请求 -->
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
