@@ -88,9 +88,8 @@ public class PromQLServiceImpl implements PromQLService {
         return jsonObject;
     }
 
-    private String parseTime(Date date){
-        String dateTime = simpleDateFormat.format(date);
-        return dateTime.substring(0, 10) + "T" + dateTime.substring(10) + "Z";
+    private long parseTime(Date date){
+        return date.getTime() / 1000;
     }
 
     private List<String> parseUrl(String url){

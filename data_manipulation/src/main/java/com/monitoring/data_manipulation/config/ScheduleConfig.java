@@ -55,7 +55,7 @@ public class ScheduleConfig implements SchedulingConfigurer {
                 @Override
                 public void run() {
                     Date now = new Date();
-                    Date start = DateUtil.getBeforeDate(now, 0, 8, 0, 15);
+                    Date start = DateUtil.getBeforeDate(now, 0, 0, 0, 15);
                     Date end = DateUtil.getAfterDate(now, 0, 0, 0, 0, 0, 0);
                     PromMatrixData promMatrixData = normSearchService.queryRangeData(start, end, 5);
                     String jsonData = JSON.toJSONString(promMatrixData);

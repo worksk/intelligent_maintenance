@@ -20,8 +20,8 @@ public class TimingDataReceiverAndPusher {
 
     @RabbitHandler
     public void receiveAndPush(String message) {
-//        System.out.println("receiver: ");
-//        System.out.println(message);
+        System.out.println("receiver: ");
+        System.out.println(message);
         simpMessagingTemplate.convertAndSend("/monitoring/timingData", message);
     }
 
