@@ -21,7 +21,7 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
      */
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {
-        registry.addEndpoint("/fetchData").withSockJS();
+        registry.addEndpoint("/fetchData").setAllowedOrigins("*").withSockJS();
     }
 
     /**
@@ -31,6 +31,8 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
     public void configureMessageBroker(MessageBrokerRegistry registry) {
         // 广播消息代理
         registry.enableSimpleBroker("/monitoring");
+        // 全局使用的订阅前缀
+        registry.setApplicationDestinationPrefixes("/app/");
     }
 
 }

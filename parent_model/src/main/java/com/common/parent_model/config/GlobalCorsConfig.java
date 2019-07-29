@@ -1,4 +1,4 @@
-package com.monitoring.data_manipulation.config;
+package com.common.parent_model.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

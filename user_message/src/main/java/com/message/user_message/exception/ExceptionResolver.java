@@ -1,4 +1,4 @@
-package com.monitoring.data_manipulation.exception;
+package com.message.user_message.exception;
 
 import com.common.parent_model.common.CodeEnum;
 import com.common.parent_model.common.ReturnData;
@@ -20,6 +20,7 @@ public class ExceptionResolver {
     @ResponseBody
     @ExceptionHandler(value = BaseException.class)
     public ReturnData ExceptionHandler(BaseException e){
+        e.printStackTrace();
         log.error("catch BaseException for 基础异常: {}", e.getMessage());
         return ReturnData.fail(e.getCode(), e.getMsg());
     }
@@ -27,6 +28,7 @@ public class ExceptionResolver {
     @ResponseBody
     @ExceptionHandler(value = Exception.class)
     public ReturnData ExceptionHandler(Exception e){
+        e.printStackTrace();
         log.error("catch Exception for 未捕获异常: {}", e.getMessage());
         return ReturnData.fail(CodeEnum.UN_KNOW_ERROR.getCode(), e.getMessage());
     }

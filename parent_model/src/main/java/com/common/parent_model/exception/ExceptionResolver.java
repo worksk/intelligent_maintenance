@@ -1,8 +1,7 @@
-package com.monitoring.data_manipulation.exception;
+package com.common.parent_model.exception;
 
 import com.common.parent_model.common.CodeEnum;
 import com.common.parent_model.common.ReturnData;
-import com.common.parent_model.exception.BaseException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;

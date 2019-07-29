@@ -1,4 +1,4 @@
-package com.monitoring.data_manipulation.common;
+package com.common.parent_model.common;
 
 import lombok.Data;
 

@@ -16,12 +16,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class WebSocketController {
 
     /**
-     * 获得 prometheus 推送来的消息
+     * 获得修改后的指标
      * 将数据发送给订阅了消息的浏览器
      *
      * param: 获得的消息
      */
-    @MessageMapping("/promPushData")
+    @MessageMapping("/updateMetrics")
     @SendTo("/monitoring/getCurrentData")
     public void receive(JSONObject param){
         //TODO disposal data and send data to browser

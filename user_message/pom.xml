@@ -8,11 +8,11 @@
         <version>2.1.6.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.monitoring</groupId>
-    <artifactId>data_manipulation</artifactId>
+    <groupId>com.message</groupId>
+    <artifactId>user_message</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>data_manipulation</name>
-    <description>数据操作模块</description>
+    <name>user_message</name>
+    <description>用户相关</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -20,30 +20,18 @@
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>com.message</groupId>
-            <artifactId>user_message</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
 
-        <!-- 发送 http 请求 -->
-        <dependency>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpclient</artifactId>
-            <version>4.5.9</version>
-        </dependency>
-
-        <!-- RabbitMQ -->
+        <!-- Redis 缓存 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-amqp</artifactId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
 
-        <!-- 简化 POJO 代码 -->
+        <!-- JWT 验证 -->
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
+            <groupId>com.auth0</groupId>
+            <artifactId>java-jwt</artifactId>
+            <version>3.8.1</version>
         </dependency>
 
         <dependency>
@@ -51,6 +39,19 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>com.common</groupId>
+            <artifactId>parent_model</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        
     </dependencies>
 
     <dependencyManagement>
